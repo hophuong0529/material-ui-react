@@ -16,12 +16,13 @@ import avatar from "../assets/images/avatar.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: 652,
+    minHeight: 594,
     width: "85%",
     backgroundColor: "black",
     paddingTop: 40,
     color: "white",
     height: "100%",
+    fontFamily: "Nunito",
   },
   avatarLarge: {
     width: theme.spacing(10),
@@ -29,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   adminInfo: {
     fontSize: 14.5,
-    fontFamily: "Nunito",
     textAlign: "center",
     margin: "auto",
     paddingBottom: 15,

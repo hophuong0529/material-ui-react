@@ -11,6 +11,7 @@ import Paper from "@material-ui/core/Paper";
 import { Typography } from "@material-ui/core";
 import EditRoundedIcon from "@material-ui/icons/EditRounded";
 import DeleteRoundedIcon from "@material-ui/icons/DeleteRounded";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles({
   table: {
@@ -38,6 +39,18 @@ const useStyles = makeStyles({
 export default function Overview() {
   const classes = useStyles();
   const [products, setProducts] = useState([]);
+
+  const handleDelete = (item) => {
+    const productId = item.id;
+    axios
+      .post(`http://127.0.0.1:8000/api/product/delete`, { productId })
+      .then(() => {
+        setProducts(products.filter((x) => x.id !== item.id));
+        alert("Delete success.");
+      })
+      .catch((error) => console.log(error));
+  };
+
   useEffect(() => {
     axios.get("http://127.0.0.1:8000/api/products").then((response) => {
       setProducts(response.data.data);
@@ -120,8 +133,10 @@ export default function Overview() {
           </TableHead>
           <TableBody>
             {products.map((row) => (
-              <TableRow key={row.name}>
-                <TableCell align="center">{row.id}</TableCell>
+              <TableRow key={row.id}>
+                <TableCell className={classes.row} align="center">
+                  {row.id}
+                </TableCell>
                 <TableCell
                   align="center"
                   style={{ padding: "5px 5px 0px 5px" }}
@@ -129,7 +144,7 @@ export default function Overview() {
                   <img
                     src={process.env.REACT_APP_URL_IMAGE + row.images[0].path}
                     alt=""
-                    style={{ width: "80%" }}
+                    style={{ width: "80%", border: "#ffd9d6 thin solid" }}
                   />
                 </TableCell>
                 <TableCell className={classes.row} align="center">
@@ -150,9 +165,26 @@ export default function Overview() {
                 <TableCell className={classes.row} align="center">
                   {row.category.name}
                 </TableCell>
-                <TableCell align="center">
-                  <EditRoundedIcon style={{ color: "#ffa6b6" }} />{" "}
-                  <DeleteRoundedIcon />
+                <TableCell align="right">
+                  <IconButton
+                    href={"/product/edit/" + row.id}
+                    style={{ padding: 8 }}
+                  >
+                    <EditRoundedIcon style={{ color: "#ffa6b6" }} />
+                  </IconButton>
+                  <IconButton
+                    style={{
+                      backgroundColor: "inherit",
+                      border: "none",
+                      padding: 8,
+                    }}
+                    onClick={() => {
+                      if (window.confirm("Bạn muốn xóa sản phẩm này?"))
+                        handleDelete(row);
+                    }}
+                  >
+                    <DeleteRoundedIcon />
+                  </IconButton>
                 </TableCell>
               </TableRow>
             ))}

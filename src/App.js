@@ -4,6 +4,8 @@ import ManageList from "./components/SideBar";
 import { Grid } from "@material-ui/core";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Overview from "./components/product/Overview";
+import Add from "./components/product/Add";
+import Edit from "./components/product/Edit";
 import "@fontsource/nunito"
 
 export default function App() {
@@ -19,8 +21,8 @@ export default function App() {
           <BrowserRouter>
             <Switch>
               <Route exact path="/products" component={Overview} />
-              <Route path="/product/add" />
-              <Route path="/product/edit/:id" />
+              <Route path="/product/add" component={Add} />
+              <Route path="/product/edit/:id" component={Edit}/>
             </Switch>
           </BrowserRouter>
         </Grid>
