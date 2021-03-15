@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 120,
   },
   dropzone: {
-    width: "74%",
+    width: "82.6%",
     flex: 1,
     display: "flex",
     flexDirection: "column",
@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Nunito",
   },
   buttonLabel: {
+    margin: 0,
     fontFamily: "Nunito",
   },
   button: {
@@ -140,10 +141,12 @@ export default function Add() {
     formEditData.append("on_sale", onSale);
     Array.from(images).forEach((el) => formEditData.append("images[]", el));
 
-    axios.post(`http://127.0.0.1:8000/api/product/${slug.id}`, formEditData).then(() => {
-      alert("Edit success.");
-      history.push("/products");
-    });
+    axios
+      .post(`http://127.0.0.1:8000/api/product/${slug.id}`, formEditData)
+      .then(() => {
+        alert("Edit success.");
+        history.push("/products");
+      });
   };
 
   return (
@@ -296,7 +299,8 @@ export default function Add() {
             className={classes.textLabel}
             control={
               <Checkbox
-                name="is_top" checked={isTop === 1 ? 'checked' : ''}
+                name="is_top"
+                checked={isTop === 1 ? "checked" : ""}
                 value={isTop}
                 onChange={(e) => (e.target.checked ? setIsTop(1) : setIsTop(0))}
               />
@@ -311,7 +315,8 @@ export default function Add() {
             control={
               <Checkbox
                 name="on_sale"
-                value={onSale} checked={onSale === 1 ? 'checked' : ''}
+                value={onSale}
+                checked={onSale === 1 ? "checked" : ""}
                 onChange={(e) =>
                   e.target.checked ? setOnSale(1) : setOnSale(0)
                 }
@@ -320,7 +325,7 @@ export default function Add() {
             label="This is Sale product"
           />
         </div>
-        <div style={{ marginTop: 50, marginLeft: 270 }}>
+        <div style={{ marginTop: 35, marginLeft: 270 }}>
           <Button
             className={classes.button}
             variant="outlined"

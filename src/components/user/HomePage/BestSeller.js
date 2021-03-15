@@ -10,5 +10,9 @@ export default function Brand() {
       setProducts(response.data);
     });
   }, []);
-  return <ProductBlock products={products} title={title} />;
+  return (
+    <div className="tp_product_betseller">
+      <ProductBlock products={products} title={title} />
+    </div>
+  );
 }

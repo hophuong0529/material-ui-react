@@ -8,7 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 
 export default function Brand() {
   return (
-    <div className="banner">
+    <div className="banner" style={{ marginBottom: 30 }}>
       <Carousel fade>
         <Carousel.Item>
           <img className="d-block w-100" src={banner1} alt="First slide" />
@@ -27,7 +27,7 @@ export default function Brand() {
                 >
                   TẠI SAO BẠN NÊN CHỌN MOJY?
                 </h4>
-                <p style={{fontFamily: "Roboto, sans-serif",}}>
+                <p style={{ fontFamily: "Roboto, sans-serif" }}>
                   Ở MOJY, chúng tôi luôn cố gắng hết sức để làm hài lòng quý
                   khách.
                   <br />

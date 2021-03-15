@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 120,
   },
   dropzone: {
-    width: "74%",
+    width: "82.6%",
     flex: 1,
     display: "flex",
     flexDirection: "column",
@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Nunito",
   },
   buttonLabel: {
+    margin: 0,
     fontFamily: "Nunito",
   },
   button: {
@@ -284,7 +285,7 @@ export default function Add() {
             label="This is Sale product"
           />
         </div>
-        <div style={{ marginTop: 50,  marginLeft: 270 }}>
+        <div style={{ marginTop: 35, marginLeft: 270 }}>
           <Button
             className={classes.button}
             variant="outlined"

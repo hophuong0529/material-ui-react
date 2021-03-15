@@ -14,7 +14,7 @@ export default function ProductBlock(props) {
   const classes = useStyles();
   const products = props.products;
   return (
-    <div className="blockSlide tp_product_betseller">
+    <div className="blockSlide">
       <div className="prdTitle bg">
         <h2>
           <span className="title-name">{props.title}</span>

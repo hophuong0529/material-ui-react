@@ -12,49 +12,23 @@ import ListIcon from "@material-ui/icons/List";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import AddIcon from "@material-ui/icons/Add";
 import { Avatar } from "@material-ui/core";
-import avatar from "../../assets/images/avatar.jpg";
+import avatar from "../../../assets/images/avatar.jpg";
+import "./ad-sidebar.css";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    minHeight: 594,
-    width: "85%",
-    backgroundColor: "black",
-    paddingTop: 40,
-    color: "white",
-    height: "100%",
-    fontFamily: "Nunito",
-  },
   avatarLarge: {
     width: theme.spacing(10),
     height: theme.spacing(10),
-  },
-  adminInfo: {
-    fontSize: 14.5,
-    textAlign: "center",
-    margin: "auto",
-    paddingBottom: 15,
   },
   menu: {
     fontFamily: "Nunito",
     fontSize: 12,
   },
-  icon: {
-    marginTop: -2,
-    color: "#e1b0b0",
-    minWidth: 40,
-  },
-  name: {
-    textAlign: "center",
-    color: "white",
-    fontWeight: "bold",
-  },
   nested: {
     paddingLeft: theme.spacing(4),
-  },
-  listItem: {
-    marginLeft: 20,
-    marginRight: 20,
-    color: "#e1b0b0",
+    "&:hover": {
+      color: "white",
+    },
   },
 }));
 
@@ -74,9 +48,9 @@ export default function AdSideBar() {
     <List
       component="nav"
       aria-labelledby="nested-list-subheader"
-      className={classes.root}
+      className="list-menu"
     >
-      <div className={classes.adminInfo}>
+      <div className="admin-info">
         <Avatar
           className={classes.avatarLarge}
           src={avatar}
@@ -85,9 +59,9 @@ export default function AdSideBar() {
         <p style={{ color: "white", fontWeight: "bold" }}>Admin</p>
       </div>
 
-      <div className={classes.listItem}>
+      <div className="list-item">
         <ListItem button>
-          <ListItemIcon style={{ marginTop: -5 }} className={classes.icon}>
+          <ListItemIcon style={{ marginTop: -5 }} className="icon">
             <HomeIcon />
           </ListItemIcon>
           <ListItemText
@@ -99,7 +73,7 @@ export default function AdSideBar() {
         </ListItem>
 
         <ListItem button onClick={handleClick}>
-          <ListItemIcon className={classes.icon}>
+          <ListItemIcon className="icon">
             <ListIcon />
           </ListItemIcon>
           <ListItemText
@@ -114,7 +88,7 @@ export default function AdSideBar() {
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             <ListItemLink href="/admin/products" className={classes.nested}>
-              <ListItemIcon className={classes.icon}>
+              <ListItemIcon className="icon">
                 <VisibilityIcon />
               </ListItemIcon>
               <ListItemText
@@ -125,7 +99,7 @@ export default function AdSideBar() {
               />
             </ListItemLink>
             <ListItemLink href="/admin/product/add" className={classes.nested}>
-              <ListItemIcon className={classes.icon}>
+              <ListItemIcon className="icon">
                 <AddIcon />
               </ListItemIcon>
               <ListItemText

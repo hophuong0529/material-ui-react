@@ -1,0 +1,28 @@
+.list-menu {
+  min-height: 690.5px;
+  height: 100%;
+  width: 88%;
+  background-color: black;
+  padding-top: 50px !important;
+  color: white;
+  font-family: "Nunito";
+}
+
+.admin-info {
+  font-size: 14.5px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.list-item {
+  margin-left: 25px;
+  margin-right: 15px;
+  color: #e1b0b0;
+}
+
+.list-item .icon {
+  margin-top: -2px;
+  color: inherit;
+  min-width: 40px;
+}
