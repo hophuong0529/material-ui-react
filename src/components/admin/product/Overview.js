@@ -167,7 +167,7 @@ export default function Overview() {
                 </TableCell>
                 <TableCell align="right">
                   <IconButton
-                    href={"/product/edit/" + row.id}
+                    href={"/admin/product/edit/" + row.id}
                     style={{ padding: 8 }}
                   >
                     <EditRoundedIcon style={{ color: "#ffa6b6" }} />

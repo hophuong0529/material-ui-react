@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBar() {
+export default function AdNavBar() {
   const classes = useStyles();
 
   return (

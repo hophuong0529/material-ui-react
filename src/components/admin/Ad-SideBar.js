@@ -12,7 +12,7 @@ import ListIcon from "@material-ui/icons/List";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import AddIcon from "@material-ui/icons/Add";
 import { Avatar } from "@material-ui/core";
-import avatar from "../assets/images/avatar.jpg";
+import avatar from "../../assets/images/avatar.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,7 +62,7 @@ function ListItemLink(props) {
   return <ListItem button component="a" {...props} />;
 }
 
-export default function ManageList() {
+export default function AdSideBar() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
 
@@ -113,7 +113,7 @@ export default function ManageList() {
 
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItemLink href="/products" className={classes.nested}>
+            <ListItemLink href="/admin/products" className={classes.nested}>
               <ListItemIcon className={classes.icon}>
                 <VisibilityIcon />
               </ListItemIcon>
@@ -124,7 +124,7 @@ export default function ManageList() {
                 primary="Overview"
               />
             </ListItemLink>
-            <ListItemLink href="/product/add" className={classes.nested}>
+            <ListItemLink href="/admin/product/add" className={classes.nested}>
               <ListItemIcon className={classes.icon}>
                 <AddIcon />
               </ListItemIcon>
