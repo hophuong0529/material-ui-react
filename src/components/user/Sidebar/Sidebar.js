@@ -24,7 +24,7 @@ export default function Sidebar() {
         </li>
         <ul className="tree-menu-sub">
           {categories.map((category) => (
-            <li>
+            <li key={category.id}>
               <span></span>
               <Link to={"/category/" + category.id} className="tp_sub_title">
                 {category.name}

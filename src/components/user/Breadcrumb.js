@@ -28,7 +28,7 @@ export default function Breadcrumb(props) {
             separator={<NavigateNextIcon fontSize="small" />}
             aria-label="breadcrumb"
           >
-            <Link style={{ color: "gray", textDecoration: "none" }} href="/">
+            <Link style={{ color: "gray", textDecoration: "none" }} to="/">
               <span style={{ fontSize: 13.5 }}>Trang chủ</span>
             </Link>
             <Typography color="textPrimary" style={{ fontSize: 13.5 }}>
