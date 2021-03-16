@@ -26,7 +26,7 @@ export default function Product(props) {
             </Link>
           </div>
           <div className="price">
-            <span>{product.price?.toLocaleString()}</span>
+            <span>{product.price?.toLocaleString()}₫</span>
           </div>
         </CardContent>
         <CardActions style={{ float: "right" }}>

@@ -1,0 +1,129 @@
+.product-detail {
+    padding: 35px 60px 30px 0px;
+}
+
+.product-content {
+    position: sticky;
+    top: 135px;
+}
+
+.product-title h6 {
+    font-weight: 700;
+    color: #252a2b;
+    margin: 0 0 5px;
+    line-height: 26px;
+}
+
+.pro-sku {
+    font-size: 14px;
+    color: #a3a5a7;
+}
+
+.product-price {
+    padding: 10px 0 20px 0;
+    border-bottom: 1px dotted #dfe0e1;
+}
+
+.product-price span.pro-price {
+    color: #252a2b;
+    font-size: 18px;
+    opacity: .92;
+    font-weight: 700;
+}
+.select-quantity {
+    margin-bottom: 20px;
+}
+
+.select-quantity button {
+    border: none;
+    background-color: inherit;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.select-quantity input {
+    font-size: 13.5px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.step-down {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    margin-left: 0px !important;
+    min-width: 40px;
+    min-height: 40px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    line-height: 40px;
+    vertical-align: text-top;
+}
+
+.step-up {
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    margin-left: 0px !important;
+    min-width: 40px;
+    min-height: 40px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    line-height: 40px;
+    vertical-align: text-top;
+}
+
+#quantity {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    vertical-align: text-top;
+}
+
+.btn-addToCart {
+    font-size: 14px;
+    background: #252a2b;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: 0;
+    padding: 14px 35px;
+    line-height: 22px;
+    width: 100%;
+}
+
+.product-description {
+    margin: 20px 0;
+    color: #444;
+    border-bottom: 1px dotted #dfe0e1;
+}
+
+.tp_descrip {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.description-productdetail {
+    overflow-y: auto;
+}
+
+.multinventory {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.btn-fitting {
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #252a2b;
+    color: #252a2b;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: none;
+    padding: 13px 20px;
+    line-height: 22px;
+    width: 100%;
+    text-align: center;
+    display: block;
+}

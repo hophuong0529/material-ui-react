@@ -7,23 +7,22 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    fontFamily: "Nunito",
     borderTop: "#e1e1e1 thin solid",
     height: "100%",
-    padding: "30px 0px 15px 30px",
+    padding: "35px 0px 15px 30px",
     background: "#fcfcfc",
   },
   contact: {
     marginTop: 15,
     marginLeft: "40%",
     fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 16,
     color: "#d53b71",
   },
   province: {
+    fontSize: 18,
     fontWeight: "bold",
-    fontFamily: "Nunito",
-    marginBottom: 10,
+    marginBottom: 5,
   },
 }));
 export default function Footer() {
@@ -47,9 +46,9 @@ export default function Footer() {
         </Grid>
         <Grid item xs={6} sm={3}>
           <div>
-            <Typography variant="h6" className={classes.province}>
+            <p className={classes.province}>
               HÀ NỘI (9-21h)
-            </Typography>
+            </p>
             <ul>
               <li>81 Bà Triệu, Hai Bà Trưng</li>
               <li>241 Chùa Bộc, Đống Đa</li>
@@ -62,9 +61,9 @@ export default function Footer() {
         </Grid>
         <Grid item xs={6} sm={4}>
           <div>
-            <Typography variant="h6" className={classes.province}>
+            <p className={classes.province}>
               TP. HỒ CHÍ MINH (9h30 - 22h)
-            </Typography>
+            </p>
             <ul>
               <li>92 Hồ Tùng Mậu, P.Bến Nghé, Q1</li>
               <li>459E Nguyễn Đình Chiểu, P.5, Q.3 (ngã tư Cao Thắng)</li>

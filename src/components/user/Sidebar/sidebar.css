@@ -1,0 +1,31 @@
+.sidebar-menu {
+    position: sticky;
+    top: 135px;
+}
+.tree-menu, .tree-menu li {
+    list-style-type: none;
+}
+
+.tree-menu>li>a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13.5px;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+.tp_sub_title {
+    text-decoration: none! important;
+    padding: 5px 5px 5px 0;
+    color: #666;
+    line-height: 26px;
+    font-size: 13.5px;
+}
+
+.tree-menu li a .icon-control svg {
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+}

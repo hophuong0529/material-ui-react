@@ -1,10 +1,9 @@
 .product-item .name {
   line-height: 1.5;
   margin: 12px 15px 0px 15px;
-  font-size: 15px;
+  font-size: 16px;
   min-height: 44px;
   color: #333;
-  font-family: "Nunito";
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -20,8 +19,6 @@
 
 .product-item .price {
   margin: 10px 0px 0px 15px;
-  font-size: 17px;
+  font-size: 16px;
   color: #000;
-  font-weight: 700;
-  font-family: "Nunito";
 }

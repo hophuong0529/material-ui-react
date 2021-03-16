@@ -10,11 +10,11 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     zIndex: "1100",
     padding: 25,
-    backgroundColor: "#fffdfe!important",
+    backgroundColor: "#ffff!important",
     marginBottom: 0,
     border: 0,
     borderRadius: 0,
-    boxShadow: "0 0 20px 0 rgb(249 69 121 / 15%)",
+    boxShadow: "0 0 10px 0 rgb(219 219 219);",
     transition: "all .8s ease",
   },
   toolbar: {

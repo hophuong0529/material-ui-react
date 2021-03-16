@@ -11,6 +11,7 @@ import "@fontsource/nunito";
 import NavBar from "./components/user/NavBar";
 import Footer from "./components/user/Footer";
 import Home from "./components/user/HomePage/Home";
+import Detail from "./components/user/DetailPage/Detail";
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/">
           <NavBar />
           <Switch>
+            <Route path="/product/:id" component={Detail} />
             <Route exact path="/" component={Home} />
           </Switch>
           <Footer />
